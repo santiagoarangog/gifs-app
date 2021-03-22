@@ -1,1 +1,0 @@
-{"version":3,"sources":["src/styles.css"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB;;;AAGA;IACI,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;AACpB","file":"styles.css","sourcesContent":["html, body {\n    height: 100%;\n}\n\n\n#sidebar {\n    height: 100%;\n    min-height: 100vh;\n    min-width: 180px;\n}\n"],"sourceRoot":"webpack:///"}

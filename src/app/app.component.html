@@ -1,12 +1,18 @@
-
-<div class="d-flex">
-
-  <!-- Sidebar -->
-  <app-sidebar></app-sidebar>
-  <!-- End Sidebar -->
-
-  <app-gifs-page class="container"></app-gifs-page>
-
+<div class="sidebar-enabled">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="sidebar col-lg-2 pt-lg-4">
+                <app-sidebar></app-sidebar>
+            </div>
+            <!-- End Sidebar -->
+            <div class="col-lg-10 content py-4 mb-2 mb-sm-0 pb-sm-5" style="position: relative;">
+                <app-gifs-page></app-gifs-page>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary btn-sm sidebar-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#blog-sidebar"><i class="ai-sidebar fs-base me-2"></i>Sidebar</button>
 </div>
-
-
+<a class="btn-scroll-top show" href="#top" data-scroll="" data-fixed-element="">
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon fas fa-arrow-up">   </i>
+</a>

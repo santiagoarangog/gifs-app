@@ -1,13 +1,29 @@
 <div class="card-group">
     <div class="row">
-        <div *ngFor="let gif of resultados" class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
-
-            <div class="card mb-2">
-                <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        {{ gif.title }}
-                    </h5>
+        <div *ngFor="let gif of resultados" class="col-md-6 col-sm-6 mb-2 animate__animated animate__fadeIn hover">
+            <!-- Browser frame -->
+            <div class="frame-browser">
+                <div class="frame-browser-toolbar">
+                    <div class="text-nowrap me-3">
+                        <span class="frame-browser-button bg-danger"></span>
+                        <span class="frame-browser-button bg-warning"></span>
+                        <span class="frame-browser-button bg-success"></span>
+                    </div>
+                    <span class="fs-sm text-wraght"><a [href]="gif.url" target="_blank" style="text-decoration: none;">{{gif.url}}</a></span>
+                </div>
+                <div class="frame-browser-body bg-size-cover bg-repeat-0 bg-position-top-center" [ngStyle]="{'background': 'url('+gif.images.downsized_medium.url+')'}" style="height:50vh;">
+                    <div class="card-body">
+                        <div class="card-img-overlay justify-content-end text-center">
+                            <h3 class="h6 text-light mb-1">Santiago Arango Gutierrez</h3>
+                            <p class="fs-xs text-light mb-0 fw-bold">Front End Developer</p>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a class="text-light text-decoration-none p-1 mx-2" href="https://www.facebook.com/santiago.arangogutierrez.1/" target="_blank"><i class="ai-facebook"></i></a>
+                                <a class="text-light text-decoration-none p-1 mx-2" href="https://www.instagram.com/santiago_arango_g/" target="_blank"><i class="ai-instagram"></i></a></div>
+                        </div>
+                        <p class="card-title text-light lead">
+                            <span class="badge bg-secondary">{{ gif.title | lowercase }}</span>
+                        </p>
+                    </div>
                 </div>
             </div>
 
